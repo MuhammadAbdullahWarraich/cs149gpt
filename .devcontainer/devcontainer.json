@@ -1,3 +1,11 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04"
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y wget python3-pip && wget https://download.pytorch.org/whl/cu113/torch-1.12.0%2Bcu113-cp310-cp310-linux_x86_64.whl && pip install torch-1.12.0+cu113-cp310-cp310-linux_x86_64.whl && rm torch-1.12.0+cu113-cp310-cp310-linux_x86_64.whl",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python"
+      ]
+    }
+  }
 }
